@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Mulheres 40+</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e9);
+      color: #333;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .quiz-container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+      padding: 20px;
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      text-align: center;
+      color: #c71585;
+    }
+    .question {
+      margin: 20px 0;
+    }
+    .question p {
+      color: #c71585;
+      font-weight: bold;
+    }
+    .answers label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #ffe4f0;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .answers input[type="radio"] {
+      margin-right: 10px;
+    }
+    .answers label:hover {
+      background: #ffcce0;
+    }
+    button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .result {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+      color: #c71585;
+    }
+    .flowers {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .flower {
+      position: absolute;
+      font-size: 30px;
+      animation: floatFlower 10s linear infinite;
+      opacity: 0.5;
+    }
+    @keyframes floatFlower {
+      0% { transform: translateY(-50px) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="flowers" id="flowers"></div>
+  <div class="quiz-container">
+    <h1>Quiz Mulheres 40+</h1>
+    <form id="quizForm">
+      <div class="question">
+        <p>1. Qual das opções abaixo representa uma barreira cultural enfrentada por mulheres 40+ no mercado de trabalho?</p>
+        <div class="answers">
+          <label><input type="radio" name="q1" value="A"> A) Estereótipos que associam idade à obsolescência</label>
+          <label><input type="radio" name="q1" value="B"> B) Estímulo à diversidade intergeracional</label>
+          <label><input type="radio" name="q1" value="C"> C) Incentivo à capacitação contínua</label>
+          <label><input type="radio" name="q1" value="D"> D) Apoio à liderança feminina madura</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>2. O que uma empresa que quer atrair e cativar mulheres acima de 40 anos deve fazer?</p>
+        <div class="answers">
+          <label><input type="radio" name="q2" value="A"> A) Ignorar as diferenças geracionais</label>
+          <label><input type="radio" name="q2" value="B"> B) Focar apenas na contratação de jovens</label>
+          <label><input type="radio" name="q2" value="C"> C) Oferecer políticas de inclusão, desenvolvimento e flexibilidade</label>
+          <label><input type="radio" name="q2" value="D"> D) Criar cargos apenas operacionais para esse grupo</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>3. Qual é a consequência da falta de pertencimento no ambiente de trabalho para mulheres acima de 40 anos?</p>
+        <div class="answers">
+          <label><input type="radio" name="q3" value="A"> A) Aumento do engajamento e produtividade</label>
+          <label><input type="radio" name="q3" value="B"> B) Sensação de exclusão e desmotivação profissional</label>
+          <label><input type="radio" name="q3" value="C"> C) Maior competitividade entre os funcionários</label>
+          <label><input type="radio" name="q3" value="D"> D) Expansão imediata das oportunidades de crescimento</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>4. De acordo com pesquisas sobre diversidade, qual é o benefício de ter mulheres 40+ em posições estratégicas dentro das empresas?</p>
+        <div class="answers">
+          <label><input type="radio" name="q4" value="A"> A) Diminuição da inovação e da criatividade</label>
+          <label><input type="radio" name="q4" value="B"> B) Redução da competitividade organizacional</label>
+          <label><input type="radio" name="q4" value="C"> C) Ampliação da visão estratégica e da experiência na tomada de decisões</label>
+          <label><input type="radio" name="q4" value="D"> D) Maior resistência a mudanças tecnológicas</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>5. Qual é um dos impactos positivos da valorização da mulher 40+ nas organizações?</p>
+        <div class="answers">
+          <label><input type="radio" name="q5" value="A"> A) Redução da diversidade de ideias</label>
+          <label><input type="radio" name="q5" value="B"> B) Aumento da rotatividade</label>
+          <label><input type="radio" name="q5" value="C"> C) Desestímulo ao desenvolvimento profissional</label>
+          <label><input type="radio" name="q5" value="D"> D) Fortalecimento da cultura inclusiva e do ambiente colaborativo</label>
+        </div>
+      </div>
+      <button type="submit">Ver Resultado</button>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const correctAnswers = {
+      q1: "A",
+      q2: "C",
+      q3: "B",
+      q4: "C",
+      q5: "D"
+    };
+
+    document.getElementById("quizForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let score = 0;
+      let output = "";
+
+      for (let key in correctAnswers) {
+        const question = document.querySelector(`input[name="${key}"]:checked`);
+        const correct = correctAnswers[key];
+
+        if (question) {
+          const userAnswer = question.value;
+          const label = question.parentElement;
+          if (userAnswer === correct) {
+            label.classList.add("correct");
+            score++;
+            output += `Questão ${key.slice(1)}: ✔️ Correta<br>`;
+          } else {
+            label.classList.add("incorrect");
+            const correctLabel = document.querySelector(`input[name="${key}"][value="${correct}"]`).parentElement;
+            correctLabel.classList.add("correct");
+            output += `Questão ${key.slice(1)}: ❌ Incorreta<br>Resposta correta: ${correctLabel.textContent.trim()}<br><br>`;
+          }
+        } else {
+          const correctLabel = document.querySelector(`input[name="${key}"][value="${correct}"]`).parentElement;
+          correctLabel.classList.add("correct");
+          output += `Questão ${key.slice(1)}: ❌ Não respondida<br>Resposta correta: ${correctLabel.textContent.trim()}<br><br>`;
+        }
+      }
+
+      output += `<strong>Você acertou ${score} de 5 perguntas!</strong>`;
+      document.getElementById("result").innerHTML = output;
+    });
+
+    const flowerContainer = document.getElementById("flowers");
+    for (let i = 0; i < 20; i++) {
+      const flower = document.createElement("div");
+      flower.className = "flower";
+      flower.textContent = "🌸";
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.animationDelay = Math.random() * 10 + "s";
+      flower.style.opacity = 0.4 + Math.random() * 0.5;
+      flowerContainer.appendChild(flower);
+    }
+  </script>
+</body>
+</html>
